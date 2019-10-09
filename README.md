@@ -86,7 +86,7 @@ Database search (Back End) - 3 Days
 >- 7.3 Copy information - 2 Days
 >- 7.4 Print formatted information - 3 Days
 
-**Allocate Tasks**\
+**Allocate Tasks**
 
 **Milestone 1.0 - 27 Work Days**\
 User Stories: Part of 1, 4, Complete 2, 3, 5\
