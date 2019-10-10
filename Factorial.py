@@ -1,5 +1,5 @@
 import sys
-
+#this is a factorial funtion
 def fact(n):
     """
     Factorial function
