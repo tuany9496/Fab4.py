@@ -1,0 +1,13 @@
+{%extends 'search/base.html'%}
+{% block 'body' %}
+{% load widget_tweaks %}
+
+<h2>SEARCH RESULTS</h2>
+<!-- <form action ="{% url 'searched'%}" method = "POST">
+  {% csrf_token %}
+  {{ searchforms}}
+  <input type="submit" value="Search">
+</form> -->
+<body>{{note}} {{city_weather}}</body>
+
+{% endblock%}
