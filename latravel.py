@@ -180,7 +180,7 @@ class SearchResultPage(Page):
            'dewpoint_c': '',
            'relative_humidity': '',
            'wind_string':   '',
-           'visibility_mi': '',
+          # 'visibility_mi': '',
            'pressure_string': '',
            'pressure_in': '',
            'location': ''
@@ -217,7 +217,7 @@ class SearchResultPage(Page):
            dew.set('{} \xb0F  ({} \xb0C)'.format(weather_data_tags_dict['dewpoint_f'], weather_data_tags_dict['dewpoint_c']))
            rel_humi.set(weather_data_tags_dict['relative_humidity'] + ' %')
            wind.set(weather_data_tags_dict['wind_string'])
-           visi.set(weather_data_tags_dict['visibility_mi'] + ' miles')
+          # visi.set(weather_data_tags_dict['visibility_mi'] + ' miles')
            msl.set(weather_data_tags_dict['pressure_string'])
            alti.set(weather_data_tags_dict['pressure_in'] + ' in Hg')
 
