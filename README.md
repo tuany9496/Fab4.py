@@ -1,7 +1,52 @@
-Fab4.py
-303 Python Project
+# IST-303 Group Project
 
-IST303 Group Project
+# How to run the Application:
+
+## Requirements:
+* Python 3.7.1
+* pip
+* Virtual Environment
+
+## Run Application:
+
+1. In the application root folder,
+
+ <pre><code>
+# In Windows
+.\virtenv\Scripts\activate
+# In Mac
+source virtenv/Scripts/activate
+</code></pre>
+    You might have to <code>pip install -r requirements.txt</code> due to OS differences.
+  </li>
+  <li>Now, run the app Django server.<br>
+    <code>
+      python manage.py runserver
+    </code>
+  </li>
+  <li>Something like this should show up:
+
+<pre><code>
+System check identified no issues (0 silenced).
+April 03, 2019 - 14:24:08
+Django version 2.1.7, using settings 'quest.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+</code></pre>
+</code></pre>
+  </li>
+  <li>Copy the http link given and paste into a web browser.</li>
+  <li>To stop server: Ctrl+C</li>
+  <li>Deactivate the virtual environment</li>
+</ol>
+
+<h3>Run Discord Monitor script:</h3>
+(Will not work properly due to disconnected services)<br>
+In the application root folder, run <code>python monitor.py</code>
+
+<h3>Tests:</h3>
+In the application root folder, run <code>pytest</code>
+ 
 # Part A
 
 Team Members: 
