@@ -9,43 +9,66 @@
 
 ## Run Application:
 
-1. In the application root folder,
+1. Clone folder from Github
 
- <pre><code>
-# In Windows
-.\virtenv\Scripts\activate
-# In Mac
-source virtenv/Scripts/activate
-</code></pre>
-    You might have to <code>pip install -r requirements.txt</code> due to OS differences.
-  </li>
-  <li>Now, run the app Django server.<br>
-    <code>
-      python manage.py runserver
-    </code>
-  </li>
-  <li>Something like this should show up:
+2. Create Virtual Environment
+> <pre><code> pip install virtualenv</code></pre>
+> <pre><code> virtualenv env</code></pre>
+> Activiate the virtual envrionment in the root folder
+> <pre><code>In Windows
+> env\Scripts\activate</code></pre>
+> <pre><code>In Mac
+> source env/Scripts/activate
+> </code></pre>
 
-<pre><code>
-System check identified no issues (0 silenced).
-April 03, 2019 - 14:24:08
-Django version 2.1.7, using settings 'quest.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.
-</code></pre>
-</code></pre>
-  </li>
-  <li>Copy the http link given and paste into a web browser.</li>
-  <li>To stop server: Ctrl+C</li>
-  <li>Deactivate the virtual environment</li>
-</ol>
+3. Install application required packages
+> <pre><code>pip install -r requirement.txt</code></pre>
 
-<h3>Run Discord Monitor script:</h3>
-(Will not work properly due to disconnected services)<br>
-In the application root folder, run <code>python monitor.py</code>
+4. Run Virtual Server 
+> <pre><code>python manage.py runserver</code></pre>
+> Results
+> <pre><code>
+> System check identified no issues (0 silenced).
+> April 03, 2019 - 14:24:08
+> Django version 2.1.7, using settings 'quest.settings'
+> Starting development server at http://127.0.0.1:8000/
+> Quit the server with CTRL-BREAK.
+> </code></pre>
+
+5. Copy http link into a web browser
+> Access LA Travel Application
+
+6. Stop server 
+>  <pre><code>Ctrl+C</code></pre>
+
+6. Deactivate virtual environment
+>  <pre><code>Deactivate</code></pre>
 
 <h3>Tests:</h3>
-In the application root folder, run <code>pytest</code>
+
+> - Activate virtualenv, and run <code>pytest</code>
+
+<h3>Admin:</h3>
+
+> - Username: cgu
+> - Password: 1234
+
+# How to use the Application:
+<h3>Map:</h3>
+
+Around me:
+> - Click the button and then enter the zip code, place, or just click on the location on the map.
+
+Directions:
+> - Click on the button and enter the destination, or simply click on the map.
+> - If you wan to avoid passing by specific area, click on the cone symbol and mark the areas that you want to avoid.   
+
+Basemap background:
+> - If you want to change the map background, click on the basemap and click that background of your choice. 
+
+Search:
+> - You can search for places using business name, business type, zip code, or category. You can also search by areas that you want to avoid. 
+
  
 # Part A
 
@@ -77,7 +100,7 @@ Part A Requirements Completed on 9-25-2019.
 
 # Part B
 **Breakdown User Stories**
-1) As a user, I can search for travel information\
+1) As a user, I can search for travel information
 >Priority 20 - 7 Days\
 >Tasks: (Front End Interface)
 >- 1.1 Select where: Basic search interface (Drop Down List of City Name) 
@@ -85,19 +108,19 @@ Database search (Back End) - 3 Days
 >- 1.2 Put in date (When - Trip date entry) - 2 Days
 >- 1.3 Select point of interests (What) - 2 Days
 
-2) As a user, I can search for detailed information about my travel\
+2) As a user, I can search for detailed information about my travel
 >Priority 20 - 5 Days\
 >Tasks: (Front End Interface)
 >- 2.1 Type out where: Intermediate search interface (Open textbox for City Name with auto-populate) - 4 Days
 >- 2.2 Pop open error message if not all criteria selected - 1 Day
 
-3)  As a user, I can view the search criterias on the search result page\
+3)  As a user, I can view the search criterias on the search result page
 >Priority 10 - 3 Days\
 >Tasks: (Front End Interface)
 >- 3.1 List out where and when - 1.5 Day
 >- 3.2  Add an edit / modify back button to search page - 1.5 Day
 
-4) As a user, I can view the search results\
+4) As a user, I can view the search results
 >Priority 10 - 15 Days\
 >Tasks: (Front End Interface)
 >- 4.1 List out search results of locations - 3 Day
@@ -106,7 +129,7 @@ Database search (Back End) - 3 Days
 >- 4.4 Prepare listing of sightsee - 3 Day
 >- 4.5 Structure and populate database with the listing - 4 Day
 
-5) As a user, I can view the search results’ additional information\
+5) As a user, I can view the search results’ additional information
 >Priority 40 - 8 Days\
 >Tasks:
 >- 5.1 List out where and when - 1 Day
@@ -115,7 +138,7 @@ Database search (Back End) - 3 Days
 >- 5.4 Overlay map of potential unsafe areas - 3 Day
 
 
-6) As a user, I can review and organize search results\
+6) As a user, I can review and organize search results
 >Priority 30 - 15 Days\
 >Tasks: (Front End Interface)
 >- 6.1 Filter and sort - 5 Days
@@ -123,7 +146,7 @@ Database search (Back End) - 3 Days
 >- 6.3 Compare results for hotels- 5 Days
 
 
-7) As a user, I can export / share the selected search results\
+7) As a user, I can export / share the selected search results
 >Priority 40 - 9 Days\
 >Tasks:
 >- 7.1 Export to outlook calendar - 2 Days
