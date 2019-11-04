@@ -25,7 +25,17 @@
 3. Install application required packages
 > <pre><code>pip install -r requirement.txt</code></pre>
 
-4. Run Virtual Server 
+4. You may have to migrate any unapplied migrations by using: python3 manage.py migrate
+
+<pre><code> Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, search, sessions
+Running migrations:
+  Applying search.0001_initial... OK
+  Applying search.0002_auto_20191102_1525... OK
+  Applying search.0003_place_type... OK
+  Applying search.0004_auto_20191102_2101... OK</code></pre>
+
+5. Run Virtual Server 
 > <pre><code>python manage.py runserver</code></pre>
 > Results
 > <pre><code>
@@ -36,13 +46,13 @@
 > Quit the server with CTRL-BREAK.
 > </code></pre>
 
-5. Copy http link into a web browser
+6. Copy http link into a web browser
 > Access LA Travel Application
 
-6. Stop server 
+7. Stop server 
 >  <pre><code>Ctrl+C</code></pre>
 
-6. Deactivate virtual environment
+8. Deactivate virtual environment
 >  <pre><code>Deactivate</code></pre>
 
 <h3>Tests:</h3>
