@@ -23,7 +23,7 @@
 > </code></pre>
 
 3. Install application required packages
-> <pre><code>pip install -r requirement.txt</code></pre>
+> <pre><code>pip install -r Requirements.txt</code></pre>
 
 4. You may have to migrate any unapplied migrations by using: python3 manage.py migrate
 
