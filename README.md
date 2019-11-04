@@ -6,6 +6,7 @@
 * Python 3.7.1
 * pip
 * Virtual Environment
+* Django
 
 ## Run Application:
 
