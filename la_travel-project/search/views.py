@@ -3,6 +3,8 @@ from .forms import SearchForms
 import json
 import requests
 import urllib.request
+from django.http import HttpResponse
+from .models import Place
 
 
 # Create your views here.
@@ -41,8 +43,19 @@ def searched (request):
                 'icon' : r['weather'][0]['icon'],
             }
             #print(city_weather)
-            note = 'Searched Results for WHERE: %s WHEN: %s to  %s WHAT: %s \n Current Weather: %s %s' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['WhenFr'], filled_form.cleaned_data['WhenTo'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'])
-            return render (request, 'search/searched.html', {'note': note})
+
+            #places = Place.objects.all()
+            if filled_form.cleaned_data['What'] == 'Sightseeing':
+                places = Place.objects.all().filter(cityName = city, WhatTypes = 'Sightseeing')
+
+            elif filled_form.cleaned_data['What'] == 'Restaurants':
+                places = Place.objects.all().filter(cityName = city, WhatTypes = 'Restaurants')
+            elif filled_form.cleaned_data['What'] == 'Hotels & Motels':
+                places = Place.objects.all().filter(cityName = city, WhatTypes= 'Hotels')
+                #places = Place.objects.all().filter(cityName = city, SICDescription = filled_form.cleaned_data['What'])
+            note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['WhenFr'], filled_form.cleaned_data['WhenTo'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'])
+            return render (request, 'search/searched.html', {'note': note, 'places': places})
+            #return render (request, 'search/searched.html', {'places': places})
             #return render (request, 'search/searched.html', {'SearchForms': new_form, 'note':note})
     else:
         form = SearchForms()

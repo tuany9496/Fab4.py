@@ -1,3 +1,32 @@
 from django.db import models
 
 # Create your models here.
+class Place(models.Model):
+
+    companyName = models. CharField(max_length=200, blank=True)
+    addressName = models. CharField(max_length=200, blank=True)
+    cityName = models. CharField(max_length=200, blank=True)
+    stateName = models. CharField(max_length=200, blank=True)
+    zipName = models. CharField(max_length=200, blank=True)
+    countyName = models. CharField(max_length=200, blank=True)
+    neigbhorhoodName = models. CharField(max_length=200, blank=True)
+    phoneNumber = models. CharField(max_length=200, blank=True)
+    websiteLink = models. CharField(max_length=200, blank=True)
+    SICDescription = models. CharField(max_length=200, blank=True)
+    SICCode = models. CharField(max_length=200, blank=True)
+    CuisineCodeDescription = models. CharField(max_length=200, blank=True)
+    TuesdayOpen = models. CharField(max_length=20, blank=True)
+    TuesdayClose = models. CharField(max_length=20, blank=True)
+    WednesdayOpen = models. CharField(max_length=20, blank=True)
+    WednesdayClose = models. CharField(max_length=20, blank=True)
+    ThursdayOpen = models. CharField(max_length=20, blank=True)
+    ThursdayClose = models. CharField(max_length=20, blank=True)
+    FridayOpen = models. CharField(max_length=20, blank=True)
+    FridayClose = models. CharField(max_length=20, blank=True)
+    SaturdayOpen = models. CharField(max_length=20, blank=True)
+    SaturdayClose = models. CharField(max_length=20, blank=True)
+    SundayOpen = models. CharField(max_length=20, blank=True)
+    SundayClose = models. CharField(max_length=20, blank=True)
+    Twitter = models. CharField(max_length=200, blank=True)
+    Faceobok = models. CharField(max_length=200, blank=True)
+    WhatTypes = models. CharField(max_length=100, blank=True)

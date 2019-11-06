@@ -8,6 +8,29 @@
   {{ searchforms}}
   <input type="submit" value="Search">
 </form> -->
-<body>{{note}} {{city_weather}}</body>
+<body>
+  <div>{{note}} {{city_weather}}</div>
+  <br>
+  <div>
+
+    <table class= "table">
+        <tr>
+            <th>Company Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Website</th>
+        </tr>
+        {% for place in places %}
+        <tr>
+            <td>{{ place.companyName }}</td>
+            <td>{{ place.addressName }}</td>
+            <td>{{ place.phoneNumber }}</td>
+            <td><a href = "http://{{place.websiteLink}}">{{ place.websiteLink }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+</body>
+
 
 {% endblock%}
