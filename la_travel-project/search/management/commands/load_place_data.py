@@ -11,7 +11,7 @@ DATETIME_FORMAT = '%m/%d/%Y %H:%M'
 
 
 ALREADY_LOADED_ERROR_MESSAGE = """
-If you need to reload the pet data from the CSV file,
+If you need to reload the place data from the CSV file,
 first delete the db.sqlite3 file to destroy the database.
 Then, run `python manage.py migrate` for a new empty
 database with tables"""
