@@ -5,7 +5,7 @@ import requests
 import urllib.request
 from django.http import HttpResponse
 from .models import Place
-
+from geopy.geocoders import Nominatim
 
 # Create your views here.
 def home (request):
@@ -53,7 +53,15 @@ def searched (request):
             elif filled_form.cleaned_data['What'] == 'Hotels & Motels':
                 places = Place.objects.all().filter(cityName = city, WhatTypes= 'Hotels')
                 #places = Place.objects.all().filter(cityName = city, SICDescription = filled_form.cleaned_data['What'])
-            note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['WhenFr'], filled_form.cleaned_data['WhenTo'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'])
+
+
+
+
+            #sunrise and Sunset
+            location = Nominatim(user_agent="my-application").geocode(city)
+            r = requests.get('https://api.sunrise-sunset.org/json', params={'lat': location.latitude, 'lng': location.longitude}).json()['results']
+
+            note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s      Sunrise %s UTC  Sunset %s UTC ' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['WhenFr'], filled_form.cleaned_data['WhenTo'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'], r['sunrise'],r['sunset'] )
             return render (request, 'search/searched.html', {'note': note, 'places': places})
             #return render (request, 'search/searched.html', {'places': places})
             #return render (request, 'search/searched.html', {'SearchForms': new_form, 'note':note})
