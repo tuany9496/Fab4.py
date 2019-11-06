@@ -6,5 +6,5 @@ pytest-cov==2.8.1
 pytest-django==3.6.0
 requests==2.22.0
 virtualenv==16.7.6
-geopy==2.0
+geopy==1.20.0
 mixer==6.1.3
