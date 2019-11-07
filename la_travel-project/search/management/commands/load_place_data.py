@@ -19,7 +19,7 @@ database with tables"""
 
 class Command(BaseCommand):
     # Show this when the user types help
-    help = "Loads data from pet_data.csv into our Pet model"
+    help = "Loads data from load_place_data.csv into our Place model"
 
     def handle(self, *args, **options):
         if Place.objects.exists():
