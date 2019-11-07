@@ -7,6 +7,7 @@
 * pip
 * Virtual Environment
 * Django
+* Geopy
 
 ## Run Application:
 
