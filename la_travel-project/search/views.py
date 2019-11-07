@@ -9,17 +9,6 @@ from geopy.geocoders import Nominatim
 
 # Create your views here.
 def home (request):
-# test
-    # if request.method =='POST':
-    #     filled_form = SearchForms(request.POST)
-    #     if filled_form.is_valid():
-    #         note = 'Searched Results for WHERE: %s WHEN: %s WHAT: %s' %(filled_form.form.cleaned_data['Where'], ['When'], ['What'])
-    #         new_form = SearchForms()
-    #         return render (request, 'search/searched.html', {'SearchForms': new_form, 'note':note})
-    # else:
-    #     form = SearchForms()
-    #     return render (request, 'search/home.html', {'searchforms': form})
-    #
 
    form = SearchForms()
    return render (request, 'search/home.html', {'searchforms':form})
@@ -28,11 +17,10 @@ def searched (request):
         filled_form = SearchForms(request.POST)
         if filled_form.is_valid():
 
-            #%(filled_form.cleaned_data['Where'], filled_form.cleaned_date['When'], filled_form.cleaned_date['What'],)
-            #new_form = SearchForms()
+
             city = (filled_form.cleaned_data['Where'])
             source = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=139a58208c47093f3371eff8a42f640c'
-            #source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q ='+ city +'&appid=139a58208c47093f3371eff8a42f640c').read()
+
 
             r = requests.get(source.format(city)).json()
 
@@ -43,7 +31,6 @@ def searched (request):
                 'icon' : r['weather'][0]['icon'],
             }
             #print(city_weather)
-
             #places = Place.objects.all()
             if filled_form.cleaned_data['What'] == 'Sightseeing':
                 places = Place.objects.all().filter(cityName = city, WhatTypes = 'Sightseeing')
@@ -52,10 +39,6 @@ def searched (request):
                 places = Place.objects.all().filter(cityName = city, WhatTypes = 'Restaurants')
             elif filled_form.cleaned_data['What'] == 'Hotels & Motels':
                 places = Place.objects.all().filter(cityName = city, WhatTypes= 'Hotels')
-                #places = Place.objects.all().filter(cityName = city, SICDescription = filled_form.cleaned_data['What'])
-
-
-
 
             #sunrise and Sunset
             location = Nominatim(user_agent="my-application").geocode(city)
@@ -63,11 +46,11 @@ def searched (request):
 
             note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s      Sunrise %s UTC  Sunset %s UTC ' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['WhenFr'], filled_form.cleaned_data['WhenTo'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'], r['sunrise'],r['sunset'] )
             return render (request, 'search/searched.html', {'note': note, 'places': places})
-            #return render (request, 'search/searched.html', {'places': places})
-            #return render (request, 'search/searched.html', {'SearchForms': new_form, 'note':note})
+
     else:
         form = SearchForms()
         return render (request, 'search/searched.html')
+        
 def map (request):
     return render (request, 'search/map.html')
 

@@ -3,6 +3,7 @@ from django.test import RequestFactory
 from django.urls import reverse
 from search.views import *
 from mixer.backend.django import mixer
+from django.test import Client
 import pytest
 
 # Map is successful display
@@ -18,6 +19,29 @@ class TestViews:
         request = RequestFactory().get(path)
         response = home(request)
         assert response.status_code == 200
+
+
+
+
+
+
+
+    # def test_pass_client(self):
+    #     c = Client()
+    #     response = c.post ('/home/', 'search/home.html', {Where='Los Angeles', WhenFr='11/6/2019', WhenTo = '11/7/2019', What = 'Restaurants'})
+    #     response = c.get('/searched/')
+    #     response.content
+
+
+
+
+    # def input_form_data(self.):
+    #     Where = 'Los Angeles'
+    #     WhenFr= '11/6/2019'
+    #     WhenTo = '11/7/2019'
+    #     What = 'Restaurants'
+
+
 
 # soup = bs4.BeautifulSoup(content, 'html.parser')
 # assert soup.select_one('h1#title-headliner') == '<h1>title</h1>'

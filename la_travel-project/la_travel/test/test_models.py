@@ -1,10 +1,32 @@
 from search.models import Place
+from mixer.backend.django import mixer
 from django.test import TestCase
 import pytest
 
+
+
 @pytest.mark.django_db
-def test_db_count():
-    assert Place.objects.count() ==0
+class TestModels (TestCase):
+
+    @staticmethod
+    def enter_data():
+        places = Place.objects.create()
+        places.companyName = 'TestCompany'
+        places.addressName = 'TestAddress'
+        places.cityName = 'TestCity'
+        places.save()
+
+        return places
+
+    def test_places(self):
+        places = self.enter_data()
+        self.assertTrue(isinstance(places, Place))
+        assert places.companyName == 'TestCompany'
+
+# @pytest.mark.django_db
+# def test_db_count():
+#     assert Place.objects.count() ==0
+
 #
 # @pytest.mark.django_db
 # class TestModels:
