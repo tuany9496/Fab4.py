@@ -20,7 +20,7 @@
 > <pre><code>In Windows
 > env\Scripts\activate</code></pre>
 > <pre><code>In Mac
-> source env/Scripts/activate
+> source env/bin/activate
 > </code></pre>
 
 3. Install application required packages
@@ -38,7 +38,7 @@ Running migrations:
   Applying search.0003_place_type... OK
   Applying search.0004_auto_20191102_2101... OK</code></pre>
 
-6. Run Virtual Server 
+6. Run Virtual Server
 > <pre><code>python manage.py runserver</code></pre>
 > Results
 > <pre><code>
@@ -52,7 +52,7 @@ Running migrations:
 7. Copy http link into a web browser
 > Access LA Travel Application
 
-8. Stop server 
+8. Stop server
 >  <pre><code>Ctrl+C</code></pre>
 
 9. Deactivate virtual environment
@@ -78,21 +78,21 @@ Directions:
 > - If you wan to avoid passing by specific area, click on the cone symbol and mark the areas that you want to avoid.   
 
 Basemap background:
-> - If you want to change the map background, click on the basemap and click that background of your choice. 
+> - If you want to change the map background, click on the basemap and click that background of your choice.
 
 Search:
-> - You can search for places using business name, business type, zip code, or category. You can also search by areas that you want to avoid. 
+> - You can search for places using business name, business type, zip code, or category. You can also search by areas that you want to avoid.
 
- 
+
 # Part A
 
-Team Members: 
+Team Members:
 Ali, Chuck, Pranav, Yian
 
-Team Name: 
+Team Name:
 Fab4.Py
 
-Product: 
+Product:
 Los Angeles Travel Guide App
 
 Stakeholder
@@ -102,7 +102,7 @@ Stakeholder
 
 **User Story and Estimated Time of Completion**
 
-As a user, I would like to enter an  address through a basic search interface to find travel information 
+As a user, I would like to enter an  address through a basic search interface to find travel information
 * A.1 As a user, I would like to see information about fun places to visit (Complete by Milestone 1.0)
 * A.2 As a user, I would like to see information about safe travel areas (Complete by Milestone 1.0)
 * A.3 As a user, I would like to see information about restaurants in the area (Complete by Milestone 1.0)
@@ -117,7 +117,7 @@ Part A Requirements Completed on 9-25-2019.
 1) As a user, I can search for travel information
 >Priority 20 - 7 Days\
 >Tasks: (Front End Interface)
->- 1.1 Select where: Basic search interface (Drop Down List of City Name) 
+>- 1.1 Select where: Basic search interface (Drop Down List of City Name)
 Database search (Back End) - 3 Days
 >- 1.2 Put in date (When - Trip date entry) - 2 Days
 >- 1.3 Select point of interests (What) - 2 Days
@@ -198,7 +198,7 @@ Iteration 1 (23  days)
 
 >- 5.1 List out where and when - 1 Day
 >- 5.2 Display for weather forecast - 2 Day
->- 1.1 Select where: Basic search interface (Drop Down List of City Name) 
+>- 1.1 Select where: Basic search interface (Drop Down List of City Name)
 Database search (Back End) - 3 Days
 
 
@@ -252,10 +252,10 @@ Iteration 1 (30  days)
 >- Friday at 11:30AM
 
 
-**Team Meetings** 
+**Team Meetings**
 >- Please view photo evidence via google doc in the Team Meeting section: https://docs.google.com/document/d/1h2-bK45PE2THBrbqpFhjicYiz09DstYrtsH_04xu95A/edit?usp=sharing
 
->10/2/2019 
+>10/2/2019
 >- Attendee: Pranav, Ali, Yian
 >- Notes: Finalize the app functionality
 
@@ -269,4 +269,3 @@ Iteration 1 (30  days)
 >10/8/2019
 >- Attendee: Pranav, Ali, Chuck, Yian
 >- Notes: Finalize Part B
-
