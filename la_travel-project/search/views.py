@@ -45,7 +45,7 @@ def searched (request):
             location = Nominatim(user_agent="my-application").geocode(city)
             r = requests.get('https://api.sunrise-sunset.org/json', params={'lat': location.latitude, 'lng': location.longitude}).json()['results']
 
-            note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s      Sunrise %s UTC  Sunset %s UTC ' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['WhenFr'], filled_form.cleaned_data['WhenTo'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'], r['sunrise'],r['sunset'] )
+            note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s      Sunrise %s UTC  Sunset %s UTC ' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['From'], filled_form.cleaned_data['To'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'], r['sunrise'],r['sunset'] )
             return render (request, 'search/searched.html', {'note': note, 'places': places})
 
     else:
