@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from .models import Place
 from geopy.geocoders import Nominatim
 
+
 # Create your views here.
 def home (request):
 
@@ -50,7 +51,7 @@ def searched (request):
     else:
         form = SearchForms()
         return render (request, 'search/searched.html')
-        
+
 def map (request):
     return render (request, 'search/map.html')
 
