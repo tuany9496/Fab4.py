@@ -60,7 +60,7 @@ Running migrations:
 
 <h3>Tests:</h3>
 
-> - Activate virtualenv, and run <code>pytest</code>
+> - Activate virtualenv, cd la-travel_project, and run <code>pytest</code>
 
 <h3>Admin:</h3>
 
