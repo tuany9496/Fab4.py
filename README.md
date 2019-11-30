@@ -8,6 +8,7 @@
 * Virtual Environment
 * Django
 * Geopy
+* wkhtmltox
 
 ## Run Application:
 
