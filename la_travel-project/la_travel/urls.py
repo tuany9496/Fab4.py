@@ -24,4 +24,5 @@ urlpatterns = [
     path('searched', views.searched, name='searched'),
     path('map', views.map, name='map'),
     path('weather', include('search.urls')),
+    path('printsearched', views.printsearched, name='printsearched'),
 ]

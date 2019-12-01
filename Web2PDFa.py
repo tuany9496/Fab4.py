@@ -1,7 +1,8 @@
-import requests
+from requests import *
 import pdfkit
 
-url = input("Please enter the url of the file you want to download:")
+url = 'http://127.0.0.1:8000/searched'
+#url = input("Please enter the url of the file you want to download:")
 path = input("Please enter the file path ex. C:\Jim\Desktop: ")
 file_name = input("Please enter file name: ")
 if pdfkit.from_url(str(url), str(path + file_name)): # Check if method from_url returned True

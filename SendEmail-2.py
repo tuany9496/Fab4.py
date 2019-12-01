@@ -7,7 +7,7 @@ mail.Body = 'Message body'
 mail.HTMLBody = '<h2>HTML Message body</h2>' #this field is optional
 
 # To attach a file to the email (optional):
-attachment  = "Path to the attachment"
-mail.Attachments.Add(attachment)
+#attachment  = "Path to the attachment"
+#mail.Attachments.Add(attachment)
 
-mail.Send()
+#mail.Send()
