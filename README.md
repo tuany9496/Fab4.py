@@ -84,6 +84,12 @@ Basemap background:
 Search:
 > - You can search for places using business name, business type, zip code, or category. You can also search by areas that you want to avoid.
 
+Avoid traffic:
+> - You can see the real time traffic of the Los Angelos area. The green color means no traffic, while the red color means heavey traffic.
+
+Crime data:
+> - The black dots on the map reprensent the areas where arrest has been done by police. When you click on the black dot, you will be able to see the details of the arrest. 
+
 
 # Part A
 
