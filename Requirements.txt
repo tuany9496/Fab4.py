@@ -12,4 +12,4 @@ pdfkit==0.6.1
 jquery==1.2.3
 django-bootstrap4==1.0.1
 django-bootstrap-datepicker-plus==3.0.5
-autopep8==0.8
+autopep8==1.4.4
