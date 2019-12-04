@@ -11,8 +11,12 @@
 <body>
   <div>{{note}} {{city_weather}}</div>
   <br>
-  <div> <a class="btn btn-primary" href="/printsearched">Print</a></div>
-  
+  <!-- <div> <a class="btn btn-primary" href="/printsearched">Print</a></div> -->
+  <form action ="{% url 'printsearched'%}" method = "POST">
+    {% csrf_token %}
+    <b>{{ searchforms}}</b>
+    <input type="submit" value="Print">
+  </form>
   <div>
 
     <table class= "table">

@@ -2,36 +2,7 @@
 {% block 'body' %}
 {% load widget_tweaks %}
 
-<h2>PRINT SEARCH RESULTS</h2>
-<!-- <form action ="{% url 'searched'%}" method = "POST">
-  {% csrf_token %}
-  {{ searchforms}}
-  <input type="submit" value="Search">
-</form> -->
-<body>
-  <div>{{note}} {{city_weather}}</div>
-  <br>
-  <div> <a class="btn btn-primary" href="/printsearched">Print</a></div>
-  <div>
 
-    <table class= "table">
-        <tr>
-            <th>Company Name</th>
-            <th>Address</th>
-            <th>Phone Number</th>
-            <th>Website</th>
-        </tr>
-        {% for place in places %}
-        <tr>
-            <td>{{ place.companyName }}</td>
-            <td>{{ place.addressName }}</td>
-            <td>{{ place.phoneNumber }}</td>
-            <td><a href = "http://{{place.websiteLink}}">{{ place.websiteLink }}</a></td>
-        </tr>
-        {% endfor %}
-    </table>
-  </div>
-</body>
 
 
 {% endblock%}
