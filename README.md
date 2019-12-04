@@ -258,13 +258,14 @@ Iteration 1 (30  days)
 >- Wednesday after class
 >- Friday at 11:30AM
 
+**Team Meetings**
+>- Please view photo evidence via google doc in the Team Meeting section: https://docs.google.com/document/d/1h2-bK45PE2THBrbqpFhjicYiz09DstYrtsH_04xu95A/edit?usp=sharing
+
+
+# Part D
 **Learned outcomes**
 > From this project, we learned the following things:
 >- 1- how to use git and GitHub for the collaborative work of team members. 
 >- 2- how to use Zen hub to create the tasks and create the burn down chart.
 >- 3- how to use python and relevant libraries to build a working program. 
 >- 4- how to test a program using pytest functions.
-
-
-**Team Meetings**
->- Please view photo evidence via google doc in the Team Meeting section: https://docs.google.com/document/d/1h2-bK45PE2THBrbqpFhjicYiz09DstYrtsH_04xu95A/edit?usp=sharing
