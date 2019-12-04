@@ -259,27 +259,12 @@ Iteration 1 (30  days)
 >- Friday at 11:30AM
 
 **Learned outcomes**
-From this project, we learned the following things:
-1- how to use git and GitHub for the collaborative work of team members. 
-2- how to use Zen hub to create the tasks and create the burn down chart.
-3- how to use python and relevant libraries to build a working program. 
-4- how to test a program using pytest functions.
+> From this project, we learned the following things:
+>- 1- how to use git and GitHub for the collaborative work of team members. 
+>- 2- how to use Zen hub to create the tasks and create the burn down chart.
+>- 3- how to use python and relevant libraries to build a working program. 
+>- 4- how to test a program using pytest functions.
 
 
 **Team Meetings**
 >- Please view photo evidence via google doc in the Team Meeting section: https://docs.google.com/document/d/1h2-bK45PE2THBrbqpFhjicYiz09DstYrtsH_04xu95A/edit?usp=sharing
-
->10/2/2019
->- Attendee: Pranav, Ali, Yian
->- Notes: Finalize the app functionality
-
->10/4/2019
->- Attendee:Ali, Chuck, Yian
->- Notes:  Work on Part B and in class exercise
-
->10/8/2019 Meeting with Professor
->- Attendee: Pranav, Ali
-
->10/8/2019
->- Attendee: Pranav, Ali, Chuck, Yian
->- Notes: Finalize Part B
