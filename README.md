@@ -1,16 +1,13 @@
 # IST-303 Group Project
 
-# How to run the Application:
-
 ## Requirements:
 * Python 3.7.1
 * pip
 * Virtual Environment
 * Django
-* Geopy
-* wkhtmltox
+* Many other packages listed in requirements.txt
 
-## Run Application:
+## How to Run the Application:
 
 1. Clone folder from Github
 
@@ -59,16 +56,23 @@ Running migrations:
 9. Deactivate virtual environment
 >  <pre><code>Deactivate</code></pre>
 
-<h3>Tests:</h3>
+
+## How to Test the Application:
+
+<h3>How to test pytest:</h3>
 
 > - Activate virtualenv, cd la-travel_project, and run <code>pytest</code>
+
+<h3>How to report the test coverage:</h3>
+
+> - Activate virtualenv, cd la-travel_project, and run <code>pytest --cov/code>
 
 <h3>Admin:</h3>
 
 > - Username: cgu
 > - Password: 1234
 
-# How to use the Application:
+# How to Use the Application:
 <h3>Map:</h3>
 
 Around me:
@@ -269,3 +273,4 @@ Iteration 1 (30  days)
 >- 2- how to use Zen hub to create the tasks and create the burn down chart.
 >- 3- how to use python and relevant libraries to build a working program. 
 >- 4- how to test a program using pytest functions.
+
