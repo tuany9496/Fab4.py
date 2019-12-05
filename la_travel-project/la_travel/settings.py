@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'bootstrap_datepicker_plus',
     #'simple_autocomplete',
-    'django_select2',
+    #'django_select2',
 
 ]
 
