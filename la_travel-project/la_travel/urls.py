@@ -19,7 +19,6 @@ from search import views
 
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
@@ -28,5 +27,6 @@ urlpatterns = [
     path('weather', include('search.urls')),
     path('printsearched', views.printsearched, name='printsearched'),
     #path(r’^simple-autocomplete/’, include(‘simple_autocomplete.urls’, namespace=’simple_autocomplete’)),
-
+    path('select2', include('django_select2.urls')),
+    
 ]

@@ -1,0 +1,4 @@
+Processing c:\users\yiant\appdata\local\pip\cache\wheels\ad\f9\5d\7012d257ec95a314bd2670558c7d770a8cbab87cb74d2443b7\django_autocomplete_light-3.5.0-cp37-none-any.whl
+Requirement already satisfied: six in c:\users\yiant\google~1\2019\cgu\303sof~1\week10~1\la_tra~1\env\lib\site-packages (from django-autocomplete-light) (1.13.0)
+Installing collected packages: django-autocomplete-light
+Successfully installed django-autocomplete-light-3.5.0

@@ -10,10 +10,17 @@
 </form> -->
 <body>
   <!--<div id="stuff">{{note}} {{city_weather}}</div>-->
+  <!-- calendar -->
+
+  <!-- AddEvent script -->
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
 
   <!-- The text field -->
   <input type="text" size='200' value="{{note}} {{city_weather}}" id="myInput">
   <br>
+
+  {% block sidebar %}
   <!-- The button used to copy the text -->
   <button onclick="myFunction()">Copy</button>
   <!--<button onclick="CopyFunction()">Copy2</button>-->
@@ -51,16 +58,30 @@
   }
   </script>
   <br>
-  <a href="http://pages.litmus.com/l/31032/2018-02-12/f4skyc/31032/141638/LitmusLiveLondon2018.ics" class="cta gmail-hide">Save the date</a>
+  <!--<a href="http://pages.litmus.com/l/31032/2018-02-12/f4skyc/31032/141638/LitmusLiveLondon2018.ics" class="cta gmail-hide">Save the date</a>
   <br>
-  <a href="mailto:yian.tuan@cgu.edu?subject=La Travel Search Results&body={% for place in places %}%0D%0A{{ place.companyName }}%20{{ place.addressName}}%20{{ place.phoneNumber}}%20{{ place.websitelink}}%0D%0A{% endfor %}">Email</a>
+  <a href="mailto:yian.tuan@cgu.edu?subject=La Travel Search Results&body={% for place in places %}%0D%0A{{ place.companyName }}%20{{ place.addressName}}%20{{ place.phoneNumber}}%20{{ place.websitelink}}%0D%0A{% endfor %}">Email</a>-->
+  {% endblock %}
   <!-- working<a href="mailto:yian.tuan@cgu.edu?subject=La Travel Search Results&body={% for place in places %}%0D%0A{{ place.companyName }}%0D%0A{% endfor %}">Email</a>-->
-  <form action ="{% url 'printsearched'%}" method = "POST">
+
+  <!-- <form action ="{% url 'printsearched'%}" method = "POST">
     {% csrf_token %}
     <b>{{ searchforms}}</b>
     <input type="submit" value="Print Test Page">
-  </form>
+  </form>-->
   <div>
+    <!-- Button code -->
+    <div title="Add to Calendar" class="addeventatc">
+      Add to Calendar
+      <span class="start">{{from}}</span>
+      <span class="end">{{to}}</span>
+      <span class="timezone">America/Los_Angeles</span>
+      <span class="title">LA Travel Plans</span>
+      <span class="description">{{note}}</span>
+      <span class="location">{{place}}</span>
+    </div>
+
+
 
     <table class= "table">
         <tr>
@@ -69,6 +90,7 @@
             <th>Phone Number</th>
             <th>Website</th>
         </tr>
+        {% if places.count > 0 %}
         {% for place in places %}
         <tr>
             <td>{{ place.companyName }}</td>
@@ -76,7 +98,11 @@
             <td>{{ place.phoneNumber }}</td>
             <td><a href = "http://{{place.websiteLink}}">{{ place.websiteLink }}</a></td>
         </tr>
+
         {% endfor %}
+        {% else %}
+        <p><b>No Search Results</b></p>
+        {% endif %}
     </table>
   </div>
 </body>

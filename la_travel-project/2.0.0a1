@@ -1,0 +1,10 @@
+Collecting django-autocomplete-light
+  Downloading https://files.pythonhosted.org/packages/1d/94/9488da8841a76cd1e1845b68d851830a9932ed8320ff715788dd2a8d550f/django-autocomplete-light-3.5.0.tar.gz (1.3MB)
+Requirement already satisfied: six in c:\users\yiant\google~1\2019\cgu\303sof~1\week10~1\la_tra~1\env\lib\site-packages (from django-autocomplete-light) (1.13.0)
+Building wheels for collected packages: django-autocomplete-light
+  Building wheel for django-autocomplete-light (setup.py): started
+  Building wheel for django-autocomplete-light (setup.py): finished with status 'done'
+  Created wheel for django-autocomplete-light: filename=django_autocomplete_light-3.5.0-cp37-none-any.whl size=1191982 sha256=f0a48ab1e7aa1fa0c5d106637a5fdbc8b8053e8d552d225accb582a96618f21b
+  Stored in directory: C:\Users\yiant\AppData\Local\pip\Cache\wheels\ad\f9\5d\7012d257ec95a314bd2670558c7d770a8cbab87cb74d2443b7
+Successfully built django-autocomplete-light
+Installing collected packages: django-autocomplete-light
