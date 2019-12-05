@@ -12,12 +12,22 @@
   <div>{{note}} {{city_weather}}</div>
   <br>
   <!-- <div> <a class="btn btn-primary" href="/printsearched">Print</a></div> -->
+  <button onclick="myFunction()">Print</button>
+
+  <script>
+  function myFunction() {
+    window.print();
+  }
+  </script>
+  <br>
+  <a href="http://pages.litmus.com/l/31032/2018-02-12/f4skyc/31032/141638/LitmusLiveLondon2018.ics" class="cta gmail-hide">Save the date</a>
+  <br>
   <a href="mailto:yian.tuan@cgu.edu?subject=La Travel Search Results&body={% for place in places %}%0D%0A{{ place.companyName }}%20{{ place.addressName}}%20{{ place.phoneNumber}}%20{{ place.websitelink}}%0D%0A{% endfor %}">Email</a>
   <!-- working<a href="mailto:yian.tuan@cgu.edu?subject=La Travel Search Results&body={% for place in places %}%0D%0A{{ place.companyName }}%0D%0A{% endfor %}">Email</a>-->
   <form action ="{% url 'printsearched'%}" method = "POST">
     {% csrf_token %}
     <b>{{ searchforms}}</b>
-    <input type="submit" value="Print">
+    <input type="submit" value="Print Test Page">
   </form>
   <div>
 
