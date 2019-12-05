@@ -8,6 +8,7 @@ from .models import Place
 from geopy.geocoders import Nominatim
 #for printsearched
 
+#for newMail
 
 
 
@@ -61,9 +62,15 @@ def map (request):
 
 
 def printsearched (request):
-	#pdf_file = HTML('http://127.0.0.1:8000/searched/').write_pdf('/tmp/search_resulted.pdf')
     return render (request, 'search/searched.html')
 
+def button(request):
+    return render (request, 'search/searched.html')
+
+def output(request):
+    data= requests.get("http://127.0.0.1:8000/searched")
+    data=data.text
+    return render (request,'search/searched.html', {'data':data})
 
 
 

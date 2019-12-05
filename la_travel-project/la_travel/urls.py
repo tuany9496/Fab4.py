@@ -19,6 +19,7 @@ from search import views
 
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
@@ -26,4 +27,6 @@ urlpatterns = [
     path('map', views.map, name='map'),
     path('weather', include('search.urls')),
     path('printsearched', views.printsearched, name='printsearched'),
+    #path(r’^simple-autocomplete/’, include(‘simple_autocomplete.urls’, namespace=’simple_autocomplete’)),
+
 ]

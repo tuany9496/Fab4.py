@@ -12,6 +12,8 @@
   <div>{{note}} {{city_weather}}</div>
   <br>
   <!-- <div> <a class="btn btn-primary" href="/printsearched">Print</a></div> -->
+  <a href="mailto:yian.tuan@cgu.edu?subject=La Travel Search Results&body={% for place in places %}%0D%0A{{ place.companyName }}%20{{ place.addressName}}%20{{ place.phoneNumber}}%20{{ place.websitelink}}%0D%0A{% endfor %}">Email</a>
+  <!-- working<a href="mailto:yian.tuan@cgu.edu?subject=La Travel Search Results&body={% for place in places %}%0D%0A{{ place.companyName }}%0D%0A{% endfor %}">Email</a>-->
   <form action ="{% url 'printsearched'%}" method = "POST">
     {% csrf_token %}
     <b>{{ searchforms}}</b>
