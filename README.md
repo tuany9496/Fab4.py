@@ -65,14 +65,13 @@ Running migrations:
 
 <h3>How to report the test coverage:</h3>
 
-> - Activate virtualenv, cd la-travel_project, and run <code>pytest --cov/code>
-
+> - Activate virtualenv, cd la-travel_project, and run <code>pytest --cov </code>
 <h3>Admin:</h3>
 
 > - Username: cgu
 > - Password: 1234
 
-# How to Use the Application:
+## How to Use the Application:
 <h3>Map:</h3>
 
 Around me:
