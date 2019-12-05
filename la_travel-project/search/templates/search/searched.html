@@ -9,13 +9,44 @@
   <input type="submit" value="Search">
 </form> -->
 <body>
-  <div>{{note}} {{city_weather}}</div>
+  <!--<div id="stuff">{{note}} {{city_weather}}</div>-->
+
+  <!-- The text field -->
+  <input type="text" size='200' value="{{note}} {{city_weather}}" id="myInput">
+  <br>
+  <!-- The button used to copy the text -->
+  <button onclick="myFunction()">Copy</button>
+  <!--<button onclick="CopyFunction()">Copy2</button>-->
   <br>
   <!-- <div> <a class="btn btn-primary" href="/printsearched">Print</a></div> -->
-  <button onclick="myFunction()">Print</button>
+  <button onclick="myPrint()">Print</button>
 
   <script>
+  function CopyFunction() {
+    var copyText = document.getElementById('stuff');
+
+    document.execCommand("copy");
+    alert(copyText.innerHTML);
+  }
+
+
   function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+    }
+
+
+  function myPrint() {
     window.print();
   }
   </script>
