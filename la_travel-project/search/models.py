@@ -30,3 +30,4 @@ class Place(models.Model):
     Twitter = models. CharField(max_length=200, blank=True)
     Faceobok = models. CharField(max_length=200, blank=True)
     WhatTypes = models. CharField(max_length=100, blank=True)
+    Rating = models. CharField(max_length=100, blank=True)

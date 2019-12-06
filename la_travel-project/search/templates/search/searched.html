@@ -89,6 +89,7 @@
             <th>Address</th>
             <th>Phone Number</th>
             <th>Website</th>
+            <th>Rating</th>
         </tr>
         {% if places.count > 0 %}
         {% for place in places %}
@@ -97,6 +98,7 @@
             <td>{{ place.addressName }}</td>
             <td>{{ place.phoneNumber }}</td>
             <td><a href = "http://{{place.websiteLink}}">{{ place.websiteLink }}</a></td>
+            <td>{{ place.Rating }}</td>
         </tr>
 
         {% endfor %}

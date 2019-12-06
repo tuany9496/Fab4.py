@@ -6,7 +6,7 @@ import urllib.request
 from django.http import HttpResponse
 from .models import Place
 from geopy.geocoders import Nominatim
-
+from operator import attrgetter
 
 # Create your views here.
 def home (request):
@@ -33,13 +33,15 @@ def searched (request):
             }
             #print(city_weather)
             #places = Place.objects.all()
-            if filled_form.cleaned_data['What'] == 'Sightseeing':
-                places = Place.objects.all().filter(cityName = city, WhatTypes = 'Sightseeing')
 
+            if filled_form.cleaned_data['What'] == 'Sightseeing':
+                #places = Place.objects.all().filter(cityName = city, WhatTypes = 'Sightseeing')
+                #sorted (places, key=attrgetter('Rating'))
+                places = Place.objects.all().filter(cityName = city, WhatTypes = 'Sightseeing').order_by('-Rating')
             elif filled_form.cleaned_data['What'] == 'Restaurants':
-                places = Place.objects.all().filter(cityName = city, WhatTypes = 'Restaurants')
+                places = Place.objects.all().filter(cityName = city, WhatTypes = 'Restaurants').order_by('-Rating')
             elif filled_form.cleaned_data['What'] == 'Hotels & Motels':
-                places = Place.objects.all().filter(cityName = city, WhatTypes= 'Hotels')
+                places = Place.objects.all().filter(cityName = city, WhatTypes= 'Hotels').order_by('-Rating')
 
             #sunrise and Sunset
 
