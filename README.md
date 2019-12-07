@@ -62,10 +62,65 @@ Running migrations:
 <h3>How to test pytest:</h3>
 
 > - Activate virtualenv, cd la-travel_project, and run <code>pytest</code>
+<pre><code> (env) λ pytest
+==================================================== test session starts ===================================================== platform win32 -- Python 3.7.4, pytest-5.2.1, py-1.8.0, pluggy-0.13.1
+Django settings: la_travel.settings (from ini file)
+rootdir: C:\Users\yiant\OneDrive\Documents\GitHub\Fab4.py\la_travel-project, inifile: pytest.ini
+plugins: cov-2.8.1, django-3.6.0
+collected 6 items
+
+la_travel\test\test_models.py .                                                                                         [ 16%] 
+la_travel\test\test_urls.py ...                                                                                         [ 66%] 
+la_travel\test\test_views.py ..                                                                                         [100%]
+
+===================================================== 6 passed in 6.41s ======================================================</code></pre>
 
 <h3>How to report the test coverage:</h3>
 
 > - Activate virtualenv, cd la-travel_project, and run <code>pytest --cov </code>
+<pre><code>(env) λ pytest --cov                                                                                                    
+============================================= test session starts ==============================================        
+platform win32 -- Python 3.7.4, pytest-5.2.1, py-1.8.0, pluggy-0.13.1                                                   
+Django settings: la_travel.settings (from ini file)                                                                     
+rootdir: C:\Users\yiant\OneDrive\Documents\GitHub\Fab4.py\la_travel-project, inifile: pytest.ini                        
+plugins: cov-2.8.1, django-3.6.0                                                                                        
+collected 7 items                                                                                                       
+                                                                                                                        
+la_travel\test\test_models.py .                                                                           [ 14%]        
+la_travel\test\test_urls.py ...                                                                           [ 57%]        
+la_travel\test\test_views.py ...                                                                          [100%]        
+                                                                                                                        
+----------- coverage: platform win32, python 3.7.4-final-0 -----------                                                  
+Name                                           Stmts   Miss  Cover                                                      
+------------------------------------------------------------------                                                      
+la_travel\__init__.py                              0      0   100%                                                      
+la_travel\settings.py                             19      0   100%                                                      
+la_travel\test\test_models.py                     18      0   100%                                                      
+la_travel\test\test_urls.py                       12      0   100%                                                      
+la_travel\test\test_views.py                      23      0   100%                                                      
+la_travel\urls.py                                  4      0   100%                                                      
+search\__init__.py                                 0      0   100%                                                      
+search\admin.py                                    5      0   100%                                                      
+search\forms.py                                   11      0   100%                                                      
+search\management\__init__.py                      0      0   100%                                                      
+search\migrations\0001_initial.py                  5      0   100%                                                      
+search\migrations\0002_auto_20191102_1525.py       4      0   100%                                                      
+search\migrations\0003_place_type.py               4      0   100%                                                      
+search\migrations\0004_auto_20191102_2101.py       4      0   100%                                                      
+search\migrations\0005_place_rating.py             4      0   100%                                                      
+search\migrations\__init__.py                      0      0   100%                                                      
+search\models.py                                  30      0   100%                                                      
+search\urls.py                                     3      0   100%                                                      
+search\views.py                                   45     28    38%                                                      
+------------------------------------------------------------------                                                      
+TOTAL                                            191     28    85%                                                      
+                                                                                                                        
+                                                                                                                        
+============================================== 7 passed in 2.53s ===============================================        
+                                                                                                                        </code></pre>
+
+
+
 <h3>Admin:</h3>
 
 > - Username: cgu
