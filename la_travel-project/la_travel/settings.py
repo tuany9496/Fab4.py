@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'bootstrap4',
     'bootstrap_datepicker_plus',
-    #'simple_autocomplete',
-    #'django_select2',
 
 ]
 
