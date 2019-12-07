@@ -14,6 +14,7 @@ class TestModels (TestCase):
         places.companyName = 'TestCompany'
         places.addressName = 'TestAddress'
         places.cityName = 'TestCity'
+        places.Rating = '2.1'
         places.save()
 
         return places

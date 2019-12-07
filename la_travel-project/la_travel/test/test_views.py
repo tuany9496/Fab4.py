@@ -20,6 +20,11 @@ class TestViews:
         response = home(request)
         assert response.status_code == 200
 
+    def test_printsearched(self):
+        path = reverse ('printsearched')
+        request = RequestFactory().get(path)
+        response = printsearched(request)
+        assert response.status_code == 200
 
 
 

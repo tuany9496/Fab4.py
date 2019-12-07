@@ -18,11 +18,8 @@ def searched (request):
         filled_form = SearchForms(request.POST)
         if filled_form.is_valid():
 
-
             city = (filled_form.cleaned_data['Where'])
             source = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=139a58208c47093f3371eff8a42f640c'
-
-
             r = requests.get(source.format(city)).json()
 
             city_weather = {
@@ -31,12 +28,9 @@ def searched (request):
                 'description' : r['weather'][0]['description'],
                 'icon' : r['weather'][0]['icon'],
             }
-            #print(city_weather)
-            #places = Place.objects.all()
 
             if filled_form.cleaned_data['What'] == 'Sightseeing':
-                #places = Place.objects.all().filter(cityName = city, WhatTypes = 'Sightseeing')
-                #sorted (places, key=attrgetter('Rating'))
+
                 places = Place.objects.all().filter(cityName = city, WhatTypes = 'Sightseeing').order_by('-Rating')
             elif filled_form.cleaned_data['What'] == 'Restaurants':
                 places = Place.objects.all().filter(cityName = city, WhatTypes = 'Restaurants').order_by('-Rating')
@@ -44,11 +38,9 @@ def searched (request):
                 places = Place.objects.all().filter(cityName = city, WhatTypes= 'Hotels').order_by('-Rating')
 
             #sunrise and Sunset
-
             #Comment out to avoid geocode error
             location = Nominatim(user_agent="my-application").geocode(city)
             r = requests.get('https://api.sunrise-sunset.org/json', params={'lat': location.latitude, 'lng': location.longitude}).json()['results']
-            #note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s     ' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['From'], filled_form.cleaned_data['To'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'] )
             note = 'HERE: %s    WHEN: %s to  %s      WHAT: %s    Current Weather: %s %s      Sunrise %s UTC  Sunset %s UTC ' %(filled_form.cleaned_data['Where'], filled_form.cleaned_data['From'], filled_form.cleaned_data['To'], filled_form.cleaned_data['What'], city_weather['temperature'], city_weather['description'], r['sunrise'],r['sunset'] )
 
             return render (request, 'search/searched.html', {'note': note, 'places': places, 'from': filled_form.cleaned_data['From'], 'to':filled_form.cleaned_data['To'], 'place': filled_form.cleaned_data['Where']})
@@ -64,18 +56,6 @@ def map (request):
 def printsearched (request):
     return render (request, 'search/searched.html')
 
-def button(request):
-    return render (request, 'search/searched.html')
-
-def output(request):
-    data= requests.get("http://127.0.0.1:8000/searched")
-    data=data.text
-    return render (request,'search/searched.html', {'data':data})
-
-
-
-
-
 def weather(request):
     if request.method == 'POST':
         city = request.POST['city']
@@ -83,7 +63,6 @@ def weather(request):
             place api_key in place of appid ="your_api_key_here "  '''
 
         # source contain JSON data from API
-
         source = urllib.request.urlopen(
             'http://api.openweathermap.org/data/2.5/weather?q ='
                     + city + '&appid = 139a58208c47093f3371eff8a42f640c').read()
