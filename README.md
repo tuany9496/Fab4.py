@@ -61,7 +61,7 @@ Running migrations:
 
 <h3>How to test pytest:</h3>
 
-> - Activate virtualenv, cd la-travel_project, and run <code>pytest</code>
+> - Activate virtualenv, cd la_travel-project, and run <code>pytest</code>
 <pre><code> (env) λ pytest
 ==================================================== test session starts ===================================================== platform win32 -- Python 3.7.4, pytest-5.2.1, py-1.8.0, pluggy-0.13.1
 Django settings: la_travel.settings (from ini file)
@@ -77,7 +77,7 @@ la_travel\test\test_views.py ..                                                 
 
 <h3>How to report the test coverage:</h3>
 
-> - Activate virtualenv, cd la-travel_project, and run <code>pytest --cov </code>
+> - Activate virtualenv, cd la_travel-project, and run <code>pytest --cov </code>
 <pre><code>(env) λ pytest --cov                                                                                                    
 ============================================= test session starts ==============================================        
 platform win32 -- Python 3.7.4, pytest-5.2.1, py-1.8.0, pluggy-0.13.1                                                   
